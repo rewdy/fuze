@@ -1,3 +1,3 @@
 # FUZE Theme
 
-This is a simple theme for Drupal.
+Fuze is a minimal Drupal 7 theme featuring the Open Sans font available from Google fonts.
