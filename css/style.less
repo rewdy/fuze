@@ -1,0 +1,224 @@
+/*
+
+Stylesheet
+----------
+
+Project:  FUZELIFE
+Date:    05/01/2013
+
+----------
+
+Table of Contents
+-----------------
+
+1. Core
+2. Layout
+3. Module
+4. Theme
+5. State
+
+----------
+
+*/
+
+/*
+0. LESS Variages
+-------
+*/
+@background: #fff;
+@color: #333;
+@accent: #33cc99;
+@linkcolor: @accent;
+@linkhover: #000;
+@linecolor: #333;
+
+@font: 'Open Sans', sans-serif;
+@size: 1.3em;
+
+@maxwidth: 1060px;
+@minwidth: 300px;
+
+@standardspace: 1.5em;
+
+/*
+1. Core
+-------
+*/
+
+// pull in core, type, and form plugins
+@import "plugins/core.less";
+@import "plugins/type.less";
+@import "plugins/drupal-forms";
+
+body {
+  background-color:lighten(@accent, 30%);
+  color:@color;
+  font-family:@font;
+  font-size:@size;
+  font-weight:300;
+  line-height:@standardspace;
+}
+
+/*
+2. Layout
+---------
+*/
+
+// pull in grid
+@import "plugins/grid.less";
+
+header#side-header {
+  padding:(@standardspace*2) 0 @standardspace 0;
+  background-color:#333;
+  color:#ccc;
+}
+#message-wrapper {
+  background-color:@background;
+}
+#main-wrapper {
+  background-color:@background;
+  padding:@standardspace 0;
+}
+footer {
+  font-size: 0.8em;
+  padding:@standardspace 0;
+  color:darken(@accent, 10%);
+}
+
+/*
+3. Module
+---------
+*/
+
+#site-name {
+  display:inline;
+  font-size:1.8em;
+  font-weight:300;
+  text-transform:uppercase;
+  a {
+    color:#fff;
+    text-decoration:none;
+  }
+}
+#site-slogan {
+  text-transform:uppercase;
+}
+// menus
+nav h2 {
+  display:none;
+}
+nav#main-menu ul.menu-links-list {
+  margin:0;
+  padding:0;
+  text-align:right;
+  li {
+    display:inline;
+    list-style:none;
+    margin:0 0 0 1em;
+    padding:0;
+    line-height:2.2em;
+    a {
+      color:#ccc;
+      text-decoration:none;
+      text-transform:uppercase;
+      &:hover {
+        color:#fff;
+      }
+    }
+  }
+}
+@media only screen and (max-width:640px) {
+  nav#main-menu ul.menu-links-list {
+    text-align:left;
+    font-size:0.9em;
+    margin-bottom:-1.2em;
+    li {
+      margin:0 1em 0 0;
+    }
+  }
+}
+@import "plugins/drupal.less";
+
+ul.menu {
+  margin:0 0 @standardspace 0;
+  padding:0;
+  border-bottom:1px solid @linecolor;
+  li {
+    list-style:none;
+    margin:0;
+    padding:0;
+    border-top:1px solid @linecolor;
+    ul.menu {
+      padding-left:1em;
+      margin-bottom:0;
+      border-bottom-width:0;
+    }
+    a {
+      display:block;
+      padding:@standardspace/4;
+      color:@color;
+      text-decoration:none;
+      &.active {
+        font-weight:600;
+      }
+      &:hover {
+        background-color:#f2f2f2;
+      }
+    }
+  }
+}
+
+
+/*
+4. Theme
+--------
+*/
+
+
+
+/*
+5. State
+--------
+*/
+.block.hl-gray,
+.block.hl-blue,
+.block.hl-pink {
+  padding:@standardspace;
+  border-style:solid;
+  border-width:0 0 2px 0;
+  border-radius:2px 2px 3px 3px;
+  :last-child {
+    margin-bottom:0;
+  }
+}
+.block.hl-gray {
+  background-color:#999;
+  border-color:#666;
+  color:#fff;
+  a {
+    color:#fff;
+  }
+}
+.block.hl-blue {
+  background-color:#54A4E9;
+  border-color:#4383BA;
+  color:#fff;
+  a {
+    color:#fff;
+  }
+}
+.block.hl-pink {
+  background-color:#F38BD5;
+  border-color:#C1459E;
+  color:#852F6D;
+  a {
+    color:#852F6D;
+  }
+}
+.upps {
+  text-transform:uppercase;
+}
+
+// pull in classes
+@import "plugins/classes.less";
+

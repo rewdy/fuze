@@ -1,0 +1,260 @@
+/* Drupal Stuff */
+
+// remove these classes before finished
+.drupal-region {
+  background-color:#ffffcc;
+  border:1px solid darken(#ffffcc, 45%);
+  color:#999;
+  padding:5px;
+  font-size:0.8em;
+}
+.drupal-region:hover {
+  box-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+
+// alerts and messages
+@defaultcolor:#666;
+@statuscolor:#00942e;
+@warningcolor:#d5aa31;
+@errorcolor:#b94040;
+@errortext:#fff;
+div.status, div.warning, div.error, div.messages {
+  display:block;
+  padding:0.5em 0.75em;
+  margin:@standardspace 0 0 0;
+  background-color:@defaultcolor;
+  color:@errortext;
+  border:0 none;
+  box-shadow:inset 0 0 6px rgba(0,0,0,0.1);
+  font-size:0.8em;
+  a {
+    color:@errortext;
+  }
+  a.closer {
+    float:right;
+    padding:0.15em 0.2em;
+    margin:0.25em 0 0 0.5em;
+    background-color:rgba(255,255,255,0.6);
+    color:#666;
+    font-size:0.8em;
+    line-height:1.5em;
+    text-transform:uppercase;
+    text-decoration:none;
+    &:hover {
+      background-color:rgba(255,255,255,0.8);
+    }
+  }
+}
+.messages ul {
+  margin:0;
+}
+div.status {
+  background-color:@statuscolor;
+}
+span.status {
+  color:@statuscolor;
+}
+div.warning {
+  background-color:@warningcolor;
+}
+span.warning {
+  color:@warningcolor;
+}
+div.error {
+  background-color:@errorcolor;
+}
+span.error {
+  color:@errorcolor;
+}
+
+// marker
+span.marker {
+  display:inline-block;
+  padding:0 0.3em;
+  background-color:@accent;
+  color:#fff;
+  text-transform:uppercase;
+  font-size:0.7em;
+  line-height:1.5em;
+}
+
+// breadcrumbs
+.breadcrumb {
+  margin-bottom:@standardspace;
+  font-size:0.7em;
+  padding:(@standardspace/2);
+  border-style:solid;
+  border-color:#e6e6e6;
+  border-width:1px 0;
+  a {
+    display:inline-block;
+    padding:0 0.3em;
+    color:#999;
+    text-decoration:none;
+    border-radius:2px;
+    &:hover {
+      background-color:#e6e6e6;
+      color:#333;
+    }
+  }
+}
+
+// tabs
+ul.tabs.primary {
+  margin:0 0 @standardspace 0;
+  padding:0;
+  border-bottom:1px solid @linecolor;
+  &:after {
+    .clearfixed;
+  }
+  li {
+    margin:0;
+    padding:0;
+    list-style:none;
+    display:inline;
+    a {
+      display:block;
+      float:left;
+      padding:5px 0.75em;
+      margin-right:0.25em;
+      background-color:#fff;
+      border: solid lighten(@linecolor, 50%);
+      border-width:1px 1px 0 1px;
+      color:@color;
+      font-size:0.9em;
+      text-transform:uppercase;
+      text-decoration:none;
+      &:hover {
+        border-color:@linecolor;
+      }
+    }
+  }
+  li.active a {
+    padding-bottom:6px;
+    padding-top:10px;
+    margin-bottom:-1px;
+    margin-top:-5px;
+    border-color:@linecolor;
+    font-weight:600;
+  }
+}
+
+ul.tabs.secondary {
+  li {
+    display:inline;
+    margin:0;
+    padding:0;
+    list-style:none;
+    a {
+      display:inline-block;
+      padding:0.2em 1em;
+      margin-right:0.5em;
+      border-radius:1.5em;
+      background-color:#e6e6e6;
+      color:@color;
+      text-decoration:none;
+      text-transform:uppercase;
+      &:hover {
+        text-decoration:underline;
+      }
+    }
+    &.active a {
+      background-color:@color;
+      color:#fff;
+    }
+  }
+}
+
+// action links
+ul.action-links {
+  li {
+    display:inline;
+    margin:0;
+    padding:0;
+    list-style:none;
+    a {
+      display:inline-block;
+      border:1px solid @linecolor;
+      padding:0.2em 1em;
+      margin-right:0.5em;
+      border-radius:1.5em;
+      color:@color;
+      text-decoration:none;
+      text-transform:uppercase;
+      &:hover {
+        background-color:#f2f2f2;
+      }
+      &:before {
+        content: "+";
+        margin-right:0.5em;
+        font-weight:600;
+      }
+    }
+  }
+}
+
+// pager
+ul.pager {
+  font-size:0.8em;
+}
+ul.pager li {
+  display:inline-block;
+  list-style:none;
+  margin:0 0.25em;
+  border:1px solid #ddd;
+}
+ul.pager li.pager-current {
+  font-weight:bold;
+}
+ul.pager li a {
+  display:block;
+
+}
+ul.pager li.pager-current,
+ul.pager li a {
+  padding:0.2em 0.75em;
+}
+ul.pager li a:hover {
+  text-decoration:none;
+  background-color:#e6e6e6;
+}
+
+// general elements
+.block {
+  margin-bottom:1em;
+}
+
+// Search Block
+form#search-block-form {
+  margin-top:5px;
+}
+form#search-block-form .container-inline {
+  background-color:#e1e2e3;
+  border:1px solid #ccc;
+  padding-right:30px;
+  position:relative;
+  box-shadow:inset 0 0 8px #ccc; 
+  -moz-border-radius:2px;
+  -webkit-border-radius:2px;
+}
+form#search-block-form .container-inline input {
+  border-width:0;
+  background-color:transparent;
+  margin:0;
+  padding:5px;
+  width:178px;
+  font-size:15px;
+  line-height:22px;
+  height:22px;
+}
+form#search-block-form .container-inline input.form-submit{
+  position:absolute;
+  top:0;
+  right:0;
+  display:block;
+  width:30px;
+  height:32px;
+  text-indent:-300px;
+  overflow:hidden;
+  background:url(../img/graphics/search-submit-icon.png) no-repeat center center;
+}

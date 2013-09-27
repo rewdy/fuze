@@ -1,0 +1,205 @@
+/* Drupal - Forms */
+
+// basic form item container
+.form-item {
+  margin:0 0 @standardspace 0;
+}
+
+// standard labels, legends for checkbox and radio arrays
+.form-item label {
+  display:block;
+  font-weight:bold;
+}
+// labels for checkboxes, radios
+.form-radios,
+.form-checkboxes {
+  column-count: 3;
+  column-gap:2%;
+}
+.form-radios label,
+.form-checkboxes label {
+  display:inline;
+  font-weight:normal;
+  cursor:pointer;
+  margin-right:1em;
+}
+.form-type-checkbox label {
+  display:inline;
+  cursor:pointer;
+}
+.form-radios .form-item,
+.form-checkboxes .form-item {
+  margin:0;
+}
+// standard input help
+.form-item .description {
+  font-size:0.9em;
+  font-style:italic;
+  color:lighten(@color, 20%);
+}
+
+fieldset {
+  padding:1em;
+  border:1px solid #ccc;
+  margin-bottom:1.5em;
+  legend {
+    font-weight:600;
+    text-transform:uppercase;
+    a {
+      color:@color;
+      text-decoration:none;
+    }
+  }
+}
+fieldset.collapsible legend a:after {
+  content: '-';
+  display:inline-block;
+  position:relative;
+  top:-2px;
+  padding:0 0.2em;
+  margin-left:0.5em;
+  width:0.8em;
+  background-color:@color;
+  color:#fff;
+  font-size:0.7em;
+  font-weight:600;
+  line-height:1.2em;
+  border-radius:0.8em;
+  text-align:center;
+}
+fieldset.collapsible.collapsed legend a:after {
+  content: '+';
+}
+
+fieldset.filter-wrapper {
+  margin-top:-@standardspace;
+}
+
+// inputs, textareas, selects, buttons, etc.!
+input[type=text],
+input[type=password],
+textarea,
+select {
+  max-width:100%;
+  padding:0.4em;
+  border:1px solid #ddd;
+  font-size:1em;
+  font-family: @font;
+  background-color:#f2f2f2;
+  color:lighten(@color, 15%);
+  outline: none;
+  -webkit-transition:all 0.2s ease-in;
+  -moz-transition:all 0.2s ease-in;
+  &:focus {
+    color:@color;
+    border-color: #666;
+    background-color:#f8f8f8;
+  }
+}
+input[type=text],
+input[type=password] {
+  width: 24em;
+}
+html.js input.form-autocomplete {
+  background-image:url(../img/throbber.gif);
+  background-repeat:no-repeat;
+  background-position:right top;
+  &.throbbing {
+    background-position:right -50px;
+  }
+}
+button,
+a.button,
+input[type=submit],
+input[type=button],
+input[type=reset] {
+  display:inline-block;
+  font-size:1em;
+  line-height:1.5em;
+  font-family: @font;
+  padding:0.3em 0.8em;
+  color:#fff;
+  background: @accent;
+  border: solid darken(@accent, 10%);
+  border-width:0 0 2px 0;
+  cursor: pointer;
+  border-radius:3px;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  &:active {
+    border-width:0;
+    position:relative;
+    top:2px;
+  }
+}
+
+a#edit-cancel {
+  margin-left:1em;
+}
+
+// password strength indicator
+.password-strength {
+  padding:0.5em;
+  background-color:#f2f2f2;
+  max-width: 24em;
+}
+.password-strength .password-strength-title {
+  font-size:0.8em;
+  font-weight:600;
+}
+.password-strength .password-strength-text {
+  float:right;
+}
+.password-strength .password-indicator .indicator {
+  clear:both;
+  height:3px;
+  background: @accent;
+}
+.password-confirm {
+  max-width: 24em;
+}
+.password-confirm span.error {
+  float:right;
+  font-size:0.8em;
+}
+
+// table forms
+table .form-item {
+  margin:0;
+}
+
+.draggable a.tabledrag-handle,
+a.tabledrag-handle .handle {
+  margin:0;
+}
+table tr.drag-previous td {
+  background-color:lighten(@warningcolor, 35%);
+}
+
+// some classes for variations
+div.submit {
+  padding-top:1em;
+  border-top:1px solid #ddd;
+}
+input.narrow {
+  width:10em;
+}
+input.long {
+  width:30em;
+}
+input.full {
+  width:96%;
+}
+/* media specifics */
+@media only screen and (max-width: 640px) {
+  input[type=text],
+  input[type=password],
+  input.long {
+    width:96%;
+  }
+  input.narrow {
+    width:43%;
+  }
+}
+
+

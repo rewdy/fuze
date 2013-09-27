@@ -1,0 +1,41 @@
+name = FUZE theme
+description = A simple theme originally made for the fuzelife.com website. Features the Open Sans font family available from Google fonts. <em>Created by <a href="http://rewdy.com">Rewdy</a>.</em>
+core = 7.x
+engine = phptemplate
+
+
+; Stylesheet
+; ------------
+stylesheets[all][] = css/style.css
+
+; Scripts
+; ------------
+scripts[] = js/script.js
+
+; Features
+; ------------
+features[] = logo
+features[] = name
+features[] = slogan
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = comment_user_verification
+features[] = favicon
+features[] = main_menu
+;features[] = secondary_menu
+
+; Regions
+; ------------
+
+; - Content Regions
+regions[header]     = Header
+regions[highlighted]   = Highlighted
+regions[help]      = Help Area
+regions[content]     = Primary Content
+regions[sidebar_first]   = Sidebar A
+regions[sidebar_second] = Sidebar B
+regions[footer]      = Footer
+
+; - Required Core Regions
+regions[page_top] = Page Top
+regions[page_bottom] = Page Bottom

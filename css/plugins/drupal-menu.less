@@ -1,0 +1,111 @@
+/* Drupal Menu Styles */
+
+// main menu
+nav {
+  background-color:@menubackgroundcolor;
+  color:@menulinkcolor;
+  margin:0;
+  padding:0;
+  &:after{
+    .clearfixafter;
+  }
+}
+
+nav ul.menu {
+  margin:0;
+  padding:0;
+}
+
+nav ul.menu li {
+  list-style:none;
+  display:inline;
+  float:left;
+  position:relative;
+  margin:0;
+  padding:0;
+  @media only screen and (max-width: 640px) {
+    float:none;
+  }
+}
+
+nav ul.menu li a {
+  display:block;
+  float:left;
+  padding:0.5em 0.8em;
+  background-color:@menubackgroundcolor;
+  color:@menulinkcolor;
+  text-decoration: none;
+  @media only screen and (max-width: 640px) {
+    float:none;
+  }
+}
+nav ul.menu li a:hover,
+nav ul.menu li:hover > a {
+  text-decoration: underline;
+  background-color: darken(@menubackgroundcolor, 10%);
+}
+nav ul.menu li ul {
+  display:none;
+}
+nav ul.menu li:hover ul {
+  display:block;
+  position:absolute;
+  left:0;
+  top:2.5em;
+  margin:0;
+  padding:0;
+  min-width:150px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+nav ul.menu li ul li {
+  display:block;
+  float:none;
+  margin:0;
+  padding:0;
+}
+nav ul.menu li ul li a {
+  float:none;
+  font-size:0.9em;
+}
+
+// sidebar menus
+.sidebar ul.menu {
+  margin:0 0 1em 0;
+  padding:0;
+  border-top:1px solid @menuline;
+}
+.sidebar ul.menu li {
+  list-style:none;
+  margin:0;
+  padding:0;
+  border-bottom:1px solid @menuline;
+}
+.sidebar ul.menu li a {
+  display:block;
+  padding:0.2em;
+  text-decoration: none;
+  &:hover {
+    background-color:@menulighthover;
+  }
+  &.active-trail {
+    font-weight: bold;
+  }
+}
+
+.sidebar ul.menu li ul {
+  padding-left:1em;
+  margin:0;
+  font-size:0.8em;
+}
+.sidebar ul.menu li ul li.last {
+  border-bottom:0 none;
+}
+
+/* Utility */
+.clearfixafter {
+  content: '\0020';
+  display: block;
+  clear: left;
+  height: 0;
+  overflow: hidden;
+}

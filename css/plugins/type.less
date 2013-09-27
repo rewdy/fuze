@@ -1,0 +1,118 @@
+/* Type + Tags */
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, table, blockquote {
+  margin:0 0 @standardspace 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-size:1em;
+  font-weight:300;
+  line-height:@standardspace;
+}
+h1 {
+  font-size:2em;
+  margin-bottom:0.5em;
+  .upps;
+}
+h2 {
+  font-size:1.5em;
+  margin-top:1.334em; // 1.334 ends up equaling 2x the @standard space.
+  margin-bottom:0.667em;
+}
+h3 {
+  margin-bottom:0.4em;
+  font-size:1.2em;
+  font-weight: 600;
+}
+h4 {
+  margin-bottom:0.4em;
+  font-size:1.2em;
+  font-weight: 600;
+  font-style:italic;
+}
+h5 {
+  font-size:1em;
+  margin-top:@standardspace;
+  margin-bottom:0.334em;
+  font-weight:bold;
+}
+h6 {
+  font-size:1em;
+  margin-bottom:0.5em;
+  font-weight:bold;
+  font-style:italic;
+}
+
+p {
+  margin:0 0 1em 0;
+}
+
+blockquote {
+  margin-left:@standardspace;
+  font-size:0.8em;
+  font-style:italic;
+  color:#666;
+}
+
+code {
+  font-size:1.15em;
+}
+
+ul li,
+ol li {
+  margin-left:2em;
+}
+
+table {
+  width:100%;
+  border-collapse: collapse;
+  font-size:0.8em;
+}
+table caption {
+  padding:0.5em;
+  background-color:#f2f2f2;
+  font-weight:600;
+}
+table tr th {
+  padding:0.7em 0.5em 0.4em 0;
+  background-color:lighten(@color, 10%);
+  border-bottom:1px solid @linecolor;
+  color:#fff;
+  text-align:left;
+  font-size:0.8em;
+  text-transform:uppercase;
+  font-weight:300;
+  &:first-child {
+    padding-left:0.5em;
+  }
+}
+table tr td {
+  padding:0.2em 0.5em 0.3em 0;
+  margin:0;
+  border-bottom:1px solid @linecolor;
+}
+table tr:hover td {
+  background-color: lighten(@accent, 70%);
+}
+
+figure {
+  background-color:#f2f2f2;
+  padding:0.5em;
+  margin-bottom:@standardspace;
+}
+figcaption {
+  font-size:0.7em;
+  color:#666;
+  text-align:center;
+}
+
+hr {
+  margin:1em 0;
+  border-top:1px solid @linecolor;
+}
+
+a {
+  color: @linkcolor;
+  &:hover {
+    color:@linkhover;
+  }
+}
